@@ -1,0 +1,12 @@
+extends ../layouts/layout 
+
+block content
+    p ブログ詳細ページ（管理者版)
+    .blog_area 
+        h3 ブログ内容
+        p= blog.updatedAt
+        h4= blog.title
+        .blog_content_area
+          | !{blog.content}
+        
+        

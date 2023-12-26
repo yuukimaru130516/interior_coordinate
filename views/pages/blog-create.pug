@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title ブログ作成ページ
+    link(rel='stylesheet', href='/stylesheets/header.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="/tinymce/tinymce.min.js") 
+  body
+    form(action="./create", method="post") 
+        .title_area
+            h2 タイトル
+            textarea#title(name="title", cols="30", rows="1")
+        .content_area
+            h2 本文     
+            textarea(id="myTextArea" name="content")
+        button(type="submit") 新規投稿
+    
+
+    script(src="/javascripts/tinymce.js")

@@ -1,0 +1,24 @@
+header {
+    height: 10%;
+    display: flex;
+    color: #FB3D28;
+    align-items: center;
+}
+
+#header_logo_area {
+    width: 30%;
+}
+
+#header_list_area {
+    width: 70%;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+header ul li {
+    margin: auto;
+}

@@ -1,0 +1,13 @@
+extends ../layouts/layout 
+
+block content
+    p 管理者ページ
+    a(href="./admin/create") ブログ新規作成
+    .blog_area 
+        h3 ブログ一覧
+        each blog in blogs
+            hr
+            h4= blog.title
+            p= blog.createdAt
+            a(href="./admin/blog/" + blog.articleId) 詳細
+            

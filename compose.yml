@@ -1,0 +1,25 @@
+version: '3'
+services:
+  app:
+    build: .
+    tty: true
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/app
+      - /app/node_modules
+    depends_on:
+      - db
+  db:
+    build: 
+      context: "."
+      dockerfile: "db.Dockerfile"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: pour_demain
+    volumes:
+      - pour-demain-data:/var/lib/postgresql/data
+volumes:
+  pour-demain-data:
+    external: true
