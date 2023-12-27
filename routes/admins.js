@@ -39,11 +39,14 @@ router.get('/create', function(req, res, next) {
 router.post('/create', async (req, res, next) => {
     const articleId = uuidv4();
     const createdAt = new Date();
+    const status = "show";
 
     const blog = await prisma.blog.create({
       data: {
         articleId: articleId,
+        category: req.body.category,
         title: req.body.title.slice(0, 255) || '（名称未設定）',
+        status: status,
         content: req.body.content,
         createdAt: createdAt
       }

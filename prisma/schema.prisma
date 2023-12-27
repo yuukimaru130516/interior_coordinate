@@ -12,8 +12,10 @@ datasource db {
 
 model Blog {
   articleId String   @id @db.Uuid
+  category      String   @db.VarChar(255)
   title     String   @db.VarChar(255)
   content   String   @db.Text
+  status    String   @db.VarChar(255)
   createdAt DateTime @db.Timestamptz(6)
 
   @@map(name: "blogs")

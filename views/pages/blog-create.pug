@@ -10,10 +10,19 @@ html
         .title_area
             h2 タイトル
             textarea#title(name="title", cols="30", rows="1")
+        .tags_area 
+            h2 タグ
+            select#category(name="category")
+              option(value="インテリア") インテリア
+              option(value="雑貨") 雑貨
+              option(value="不動産")  不動産
+              option(value="料理") 料理 
+              option(value="雑記") 雑記    
         .content_area
             h2 本文     
             textarea(id="myTextArea" name="content")
         button(type="submit") 新規投稿
+        button(type="submit") 下書き保存
     
 
     script(src="/javascripts/tinymce.js")

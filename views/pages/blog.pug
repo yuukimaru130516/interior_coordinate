@@ -1,4 +1,18 @@
 extends ../layouts/layout 
 
 block content
-    p ブログ
+    #blog_title_area
+        h2 〜〜 Blog 〜〜
+        p 当社のブログでは、不動産業界の最新情報やインテリアデザインに関するヒント、成功事例などをシェアしています。新しいアイデアやトレンドを知りたい方はぜひご覧ください。
+    #blog_lists
+        each blog in formatted_blogs
+            .blog_article
+                .blog_img_area
+                    img(src="/images/blogs/cordinate_" + blog.index + ".jpg", alt="ブログイメージ画像").article_img
+                .blog_head_area
+                    h2.article_title= blog.title
+                    .blog_article_tag_area
+                        p.article_date= blog.createdAt
+                        img(src="/images/tag.svg", alt="tag").tag_icon
+                        p.category= blog.category
+            hr

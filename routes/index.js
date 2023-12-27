@@ -8,9 +8,6 @@ function removeHtmlTags(input) {
   return input.replace(/<[^>]*>/g, '').slice(0,50);
 }
 
-const htmlString = '<p>This is <b>HTML</b> text.</p>';
-const textWithoutHtml = removeHtmlTags(htmlString);
-
 /* GET home page. */
 router.get('/', async(req, res, next) => {
   const blogs = await prisma.blog.findMany();

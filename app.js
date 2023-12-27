@@ -10,7 +10,8 @@ require('dotenv').config(); // .env ファイルを読み込む
 
 const indexRouter = require('./routes/index');
 const contactsRouter = require('./routes/contacts');
-const adminsRouter = require('./routes/admins')
+const adminsRouter = require('./routes/admins');
+const blogsRouter = require('./routes/blogs')
 
 const app = express();
 app.use(helmet());
@@ -36,6 +37,8 @@ app.use('/tinymce', express.static(path.join(__dirname, 'node_modules', 'tinymce
 
 app.use('/', indexRouter);
 app.use('/contacts', contactsRouter);
+app.use('/blogs', blogsRouter);
+
 // admin以下は認証が必要
 app.use('/admin', basicAuthMiddleware, adminsRouter);
 

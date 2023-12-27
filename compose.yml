@@ -17,9 +17,9 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: pour_demain
+      POSTGRES_DB: interior_coordinate
     volumes:
-      - pour-demain-data:/var/lib/postgresql/data
+      - interior-coordinate-data:/var/lib/postgresql/data
 volumes:
-  pour-demain-data:
+  interior-coordinate-data:
     external: true
