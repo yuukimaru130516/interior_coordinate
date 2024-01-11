@@ -1,13 +1,41 @@
 body {
-  margin: 0px;
+  margin: 0;
+  width: auto;
   font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
   color: #5B4B42;
   background-color: #F5F4F2;
 }
 
+/* デバック用 */
+/* *{
+  outline: 2px red solid;
+} */
+
 a {
   color: inherit;
   text-decoration: none;
+}
+
+
+
+/* タイトルのレイアウト */
+.top_title_area h2 {
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 0.8cap;
+  line-height: 3cap;
+  padding-bottom: 30px;
+}
+
+.top_title_area h2:after {
+  content: "";
+  margin: 10px auto;
+  display: block;
+  width: 120px;
+  height: 4px;
+  border-radius: 2px;
+
+  background: linear-gradient(25deg, #F13F79, #FFC778); 
 }
 
 
@@ -148,93 +176,71 @@ background:#5B4B42;
 
 /* お悩み解決エリア */
 #top_problem_area {
-  padding: 0 20px;
+  width: 100%;
 }
 
 #top_problem_title_area {
   width: 100%;
-  
-}
-
-.top_title_area h2 {
-  text-align: center;
-  font-weight: normal;
-  letter-spacing: 0.8cap;
-  line-height: 3cap;
-  padding-bottom: 30px;
-}
-
-.top_title_area h2:after {
-  content: "";
-  margin: 10px auto;
-  display: block;
-  width: 120px;
-  height: 4px;
-  border-radius: 2px;
-
-  background: linear-gradient(25deg, #F13F79, #FFC778); 
 }
 
 .top_problem_case_area {
-  height: 60vh;
-  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80px;
 }
 
-.top_problem_case_list_area{
-  position: absolute;
-  top: 50px;
-  left:100px;
+
+.top_problem_case_question_area {
+  width: 100%;
+  display: flex;
 }
 
-.top_problem_case_title_area{
-  border: #5B4B42 1px solid;
-  border-radius: 30px;
+.top_problem_case_question_area .question_area {
   width: 40%;
-  position: absolute;
-  top: 100px;
-  left: 100px
+  border: #5B4B42 1px solid;
 }
 
-.top_problem_case_area h3, .top_problem_case_area p{
-  padding-left: 20px;
+.question_area h3 {
   font-weight: normal;
+  letter-spacing: 1cap;
   line-height: 3cap;
 }
 
-.top_problem_case_solution_area{
-  border: #5B4B42 1px solid;
-  width: 55%;
-  position: absolute;
-  top: 200px;
-  left: 610px;
-
+.space_area {
+  width: 60%;
 }
 
 
-.top_problem_case_title_even_area{
-  border: #5B4B42 1px solid;
-  border-radius: 30px;
+.top_problem_case_solution_area {
+  width: 100%;
+  display: flex;
+}
+
+.top_problem_case_solution_area .space_area {
   width: 40%;
-  position: absolute;
-  top: 100px;
-  right: 100px
 }
 
-
-.top_problem_case_solution_even_area{
+.top_problem_case_solution_area .solution_area {
+  width: 60%;
   border: #5B4B42 1px solid;
-  width: 55%;
-  position: absolute;
-  top: 200px;
-  right: 610px;
-
 }
+
+.solution_area h3{
+  font-weight: normal;
+  letter-spacing: 1cap;
+  line-height: 3cap;
+}
+
 
 /* サービスの流れエリア */
 .top_process_row {
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
 }
 
 /* カードの形を作る */
