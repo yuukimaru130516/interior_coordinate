@@ -17,6 +17,21 @@ a {
 }
 
 
+/* スクロール用の設定 */
+/*----------------------------
+scroll_up ｜下から上へ出現
+----------------------------*/
+.scroll_up {
+  transition: 1.5s ease-in-out;
+  transform: translateY(30px);
+  opacity: 0;
+}
+.scroll_up.on {
+  transform: translateY(0);
+  opacity: 1.0;
+}
+
+
 
 /* タイトルのレイアウト */
 .top_title_area h2 {

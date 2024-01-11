@@ -34,6 +34,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 // 静的ファイルの提供
 app.use('/tinymce', express.static(path.join(__dirname, 'node_modules', 'tinymce')));
+// jQueryを提供する
+app.use('/jquery', express.static(path.join(__dirname, 'node_modules', 'jquery', 'dist')));
+
+
 
 app.use('/', indexRouter);
 app.use('/contacts', contactsRouter);
