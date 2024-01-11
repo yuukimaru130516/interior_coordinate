@@ -22,7 +22,7 @@ router.get('/', async(req, res, next) => {
   
       return {
         index: article_index,
-        id: article.id,
+        articleId: article.articleId,
         category: article.category,
         title: article.title,
         status: article.status,
@@ -32,5 +32,23 @@ router.get('/', async(req, res, next) => {
     })
     res.render('pages/blog', { formatted_blogs });
   });
+
+/* ブログ詳細ページ (編集や削除が可能)　*/ 
+router.get('/:articleId', async (req, res, next) => {
+  const articleId = req.params.articleId;
+  try {
+    const article = await prisma.blog.findUnique({
+      where: { articleId: articleId },
+    });
+    if (!article) {
+      return res.status(404).send('Blog not found');
+    }
+
+    res.render('pages/article', { article });
+  } catch (error) {
+    console.error('Error fetching blog details:', error);
+    res.status(500).json({ error: 'Error fetching blog details' });
+  } 
+});
   
   module.exports = router;

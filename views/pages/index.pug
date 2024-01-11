@@ -1,144 +1,134 @@
 extends ../layouts/layout
 
 block content
-  #top_image_area
-    img(src="#", alt="トップ画像", srcset="")
-    
-  
-  #top_profile_area
-    #profile_title 不動産サポート＆インテリアコーディネート
-    #profile_content 
-      p 30年以上にわたり賃貸不動産業およびリフォーム業界で培った経験をもとに私たちは新しいスタートを切りました。
-        br
-        | 私たちは、賃貸不動産の専門家としてだけでなく、クライアントの生活空間をより魅力的で快適にするためのプロフェッショナルなインテリアコーディネーターとしてもご活用いただけるサービスを提供しています。
-  hr
-
+  #top_page_area
+    #top_page_title_area
+      #top_page_title_logo_area
+        img(src="images/logo/logo.png", alt="ロゴ画像", srcset="")
+      #top_page_title_title_area   
+        h1 
+          | 賃貸契約から
+          br 
+          | コーディネートまで
+          br
+          | トータルサポート
+        p 
+          | From the rental agreement
+          br
+          | up to interior coordination
+          br
+          | total support
+    #top_page_image_area
+      img(src="images/top/top.jpg", alt="トップ画像", srcset="")
+    #top_page_menu_area
+      p menu
+  <div class="scrolldown4"><span>Scroll</span></div>
   #top_service_area
-    #service_title トータル賃貸サポートとインテリアコーディネート
+    h2 賃貸契約からインテリアコーディネートまでトータルサポート
+    p 今のお家から引っ越しをして、おしゃれな部屋に住みたい。
+    p そんな要望に私たちは、理想の暮らしをサポートいたします。
+    p 賃貸契約からインテリアコーディネートまでノンストップで行うことで理想のお部屋を作ります。
+    p 不動産業とリフォーム業の両方の現場経験を持つ私たちだからこそ、お客様の期待を超えたサービスが可能です。
+    p 賃貸契約からインテリアコーディネートまで、理想のお部屋づくりをお手伝いいたします。新しいスタートに向けて、安心して暮らせる空間を一緒に作り上げましょう。
+  #top_problem_area
+    .top_title_area
+      h2 こんなお悩みありませんか？
+    // ケース１
+    .top_problem_case_area
+      .top_problem_case_list_area
+        p CASE 01
+      .top_problem_case_title_area
+        h3 
+          | 退去時の費用や
+          br
+          | トラブルが心配・・・
+      .top_problem_case_solution_area
+        h3 退去サポート
+        p 賃貸契約の退去時に、トラブルは付きもの・・・
+        p 綺麗に使っていたつもりでも、多額の原状回復費用が請求されることも。
+        p 私たちは、30年以上の現場経験を基に、不要な請求を回避するためのサポートをいたします！
+    // ケース2
+    .top_problem_case_area
+      .top_problem_case_list_area
+        p CASE 02
+      .top_problem_case_title_even_area
+        h3 
+          | 退去時の費用や
+          br
+          | トラブルが心配・・・
+      .top_problem_case_solution_even_area
+        h3 退去サポート
+        p 賃貸契約の退去時に、トラブルは付きもの・・・
+        p 綺麗に使っていたつもりでも、多額の原状回復費用が請求されることも。
+        p 私たちは、30年以上の現場経験を基に、不要な請求を回避するためのサポートをいたします！
+    // ケース3
+    .top_problem_case_area
+      .top_problem_case_list_area
+        p CASE 03
+      .top_problem_case_title_area
+        h3 
+          | 退去時の費用や
+          br
+          | トラブルが心配・・・
+      .top_problem_case_solution_area
+        h3 退去サポート
+        p 賃貸契約の退去時に、トラブルは付きもの・・・
+        p 綺麗に使っていたつもりでも、多額の原状回復費用が請求されることも。
+        p 私たちは、30年以上の現場経験を基に、不要な請求を回避するためのサポートをいたします！
 
-    #service_top_area
-      p 新生活を始めたいが、今の家から引っ越すと退居代や引っ越し代もかかって大変そう・・・
-       br 
-       | そんな方におすすめなのがトータル賃貸サポートです！
-      img(src="/images/komaru.png", alt="困っている人のアイコン")
+  #top_process_area
+    .top_title_area
+      h2 ご依頼までの流れ
+    // １列目
+    .top_process_row
+      .process_card
+        .process_list
+          p 01
+        .process_icon
+          img(src="images/contact.svg", alt="")
+        .process_title
+          h3 お問い合わせ
+        .proess_body
+          p まずは、サイトやメールからご連絡ください。 
+          p ご相談は無料です。 
+          p お気軽にご連絡ください。
+      .process_card
+        .process_list
+          p 02
+        .process_icon
+          img(src="images/logo/meeting.svg", alt="")
+        .process_title
+          h3 初回ヒアリング
+        .proess_body
+          p まずは、サイトやメールからご連絡ください。 
+          p ご相談は無料です。 
+          p お気軽にご連絡ください。
+      .process_card
+        .process_list
+          p 03
+        .process_icon
+          img(src="images/logo/suggest.svg", alt="")
+        .process_title
+          h3 ご提案
+        .proess_body
+          p まずは、サイトやメールからご連絡ください。 
+          p ご相談は無料です。 
+          p お気軽にご連絡ください。
+    // ２列目
+    .top_process_row
 
-    #service_syoukai_area 
-      h3 トータル賃貸サポートとは？
-      p 賃貸不動産の契約からインテリアコーディネートまで一気通貫でサポートします！煩わしい、退居時のトラブルなども解決することが可能です。
-
-    h3 クオリティな賃貸ライフをお約束
-
-    h3 不動産賃貸契約サポート:
-    p 当サービスでは、賃貸契約の際に発生する様々な課題やトラブルに専門的に対応。契約締結から退去時の円滑な手続きまで、お客様のご要望に柔軟に対応いたします。安心して新生活を始めていただくため、弊社の経験豊富な専門家がお手伝いいたします.
-
-    h3 トラブル対応:
-    p 契約期間中に生じるさまざまなトラブルにも即座に対応。違法な退居代請求などの問題をプロアクティブに解決し、クライアントの権益を最大限に保護します。安全で安心な住環境をご提供することが、我々のミッションです.
-
-    h3 インテリアコーディネート:
-    p 新しい住まいでの心地よい生活をサポートするために、インテリアコーディネートサービスもご提供。お好みやライフスタイルに合わせたデザイン提案や家具配置のアドバイスを通じて、クライアントの理想の空間を実現します。豊富な経験を持つプロフェッショナルが、新しい生活のスタートをお手伝いいたします.
-    | 安心して暮らす、新しいステージへの一歩をサポートします.
-  hr
-
-  #top_flow_area
-    h2 サービスの流れ
-    .flow_box
-      .flow_number 1
-      .flow_title お問い合わせ
-    .flow_box
-      img(src="/images/contact.svg", alt="お問い合わせアイコン").flow_icon 
-      .flow_text まずは、ウェブサイトや電話などを通じてお問い合わせを行います。ヒアリングシートに簡単な情報の記載をお願いしております。
-    hr
-    .flow_down
-      img(src="/images/down.svg", alt="", srcset="")
-
-    .flow_box
-      .flow_number 2
-      .flow_title 初回面談・ヒアリング
-    .flow_box
-      img(src="/images/meeting.svg", alt="面談アイコン").flow_icon 
-      .flow_text オンラインミーティングで、クライアントの具体的な要件や希望をヒアリングします。賃貸サポートとインテリアコーディネートに関する詳細な要望や予算について話し合います。
-    hr
-    .flow_down
-      img(src="/images/down.svg", alt="", srcset="")
-
-    .flow_box
-      .flow_number 3
-      .flow_title 提案・プランの提示
-    .flow_box
-      img(src="/images/suggest.svg", alt="提案アイコン").flow_icon 
-      .flow_text オンラインミーティングで、クライアントの具体的な要件や希望をヒアリングします。賃貸サポートとインテリアコーディネートに関する詳細な要望や予算について話し合います。
-    hr
-    .flow_down
-      img(src="/images/down.svg", alt="", srcset="")
-
-    .flow_box
-      .flow_number 4
-      .flow_title ご契約
-    .flow_box
-      img(src="/images/signate.svg", alt="契約アイコン").flow_icon 
-      .flow_text クライアントが提案に同意し、契約条件が合意されたら、正式な契約書を締結します。契約内容、料金、サービス提供の期間などについて明確に記載します。
-    hr
-    .flow_down
-      img(src="/images/down.svg", alt="", srcset="")
-
-    .flow_box
-      .flow_number 5
-      .flow_title サービス実施
-    .flow_box
-      img(src="/images/service.svg", alt="提案アイコン").flow_icon 
-      .flow_text 賃貸サポートでは、契約締結後に物件の手続きやトラブル対応、退去時のサポートなどが行われます。同時に、インテリアコーディネートサービスでは、デザイン提案や家具配置の実施が進められます。
-    hr
-    .flow_down
-      img(src="/images/down.svg", alt="", srcset="")
-
-    .flow_box
-      .flow_number 6
-      .flow_title サービス完了後
-    .flow_box
-      img(src="/images/feedback.svg", alt="アンケートアイコン").flow_icon 
-      .flow_text クライアントに対してサービス完了を通知し、最終的な評価やフィードバックを受け取ります。不満や修正があれば、適切に対応します。
-    hr
-    .flow_down
-      img(src="/images/down.svg", alt="", srcset="")
-
-    .flow_box
-      .flow_number 7
-      .flow_title 継続サポート
-    .flow_box
-      img(src="/images/support.svg", alt="サポートアイコン").flow_icon 
-      .flow_text 必要に応じて、賃貸サポートやインテリアコーディネートのアフターサポートを提供し、クライアントが安心して新しい生活をスタートできるようにサポートします。
-    hr
-
+  #top_blog_area 
+    .top_title_area
+      h2 ブログ 
   #top_plan_area
-    #top_plan_title 料金プラン
-    #top_plan_explain 料金プランは2種類から選んでいただきます。お客様のニーズに合わせたプランを提供し、予算内で理想のサービスを受けることができます。詳細はお気軽にお問い合わせください。
+    .top_title_area
+      h2 料金プラン
 
-    #plan_contents_area 
-      #total_plan
-        .plan_title 一括プラン
-        .plan_content 賃貸契約サポートからインテリアコーディネートサービスまで全てお手伝いいたします！
-        .plan_price ¥30,000
-         hr
-      #coordinate_plan 
-        .plan_title インテリアコーディネートプラン
-        .plan_content インテリアコーディネートのみのプランです
-        .plan_price ¥10,000
-        hr
-
-  hr
-
-  #top_blog_area
-    h2 ブログ
-    p 当社のブログでは、不動産業界の最新情報やインテリアデザインに関するヒント、成功事例などをシェアしています。新しいアイデアやトレンドを知りたい方はぜひご覧ください。
-    #blog_lists
-      each blog in formatted_blogs
-        .blog_article
-          img(src="/images/blogs/cordinate_" + blog.index + ".jpg", alt="ブログイメージ画像").article_img
-          p.article_date= blog.createdAt
-          h4.article_title= blog.title
-          p.article_content= blog.content 
-  hr
-
-  #top_form_area
-    h2 お問い合わせ 
-    // ここにお問い合わせフォームや連絡先情報などを追加します。
+  #top_faq_area
+    .top_title_area
+      h2 よくある質問
+    .top_faq_question
+      p Q. 具体的に何をしてくれるの？  
+  #top_contact_area
+    .top_title_area
+      h2 ご相談について

@@ -1,6 +1,6 @@
 body {
-  padding: 100px;
-  font: 20px "Kosugi Maru";
+  margin: 0px;
+  font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
   color: #5B4B42;
   background-color: #F5F4F2;
 }
@@ -11,121 +11,292 @@ a {
 }
 
 
-/* トップ画像エリア */
-#top_image_area {
+/* トップページエリア */
+#top_page_area {
+  display: flex;
   width: 100%;
   height: 100vh;
-  border: #5B4B42 1px solid;
+}
+
+/* トップページタイトル */
+#top_page_title_area {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+#top_page_title_logo_area {
+  height: 40%;
+}
+
+#top_page_title_logo_area img{
+  height: 250px;
+  width: 250px;
+}
+
+#top_page_title_title_area {
+  height: 60%;
+}
+
+#top_page_title_title_area h1, #top_page_title_title_area p {
+  font-weight: normal;
+  letter-spacing: 1cap;
+  line-height: 3cap;
+  padding-left: 50px;
+}
+
+#top_page_title_title_area p {
+  opacity: 0.3;
+  color:darkblue;
+}
+
+#top_page_image_area {
+  width: 40%;
+}
+
+#top_page_image_area img{
+  width: 100%;
+  height: 100%;
+}
+
+#top_page_menu_area {
+  width: 10%;
+}
+
+#top_page_menu_area p {
+  text-align: center;
+}
+
+/*スクロールダウン全体の場所*/
+.scrolldown4{
+  /*描画位置※位置は適宜調整してください*/
+position:absolute;
+bottom:1%;
+right:5%;
+  /*矢印の動き1秒かけて永遠にループ*/
+animation: arrowmove 1s ease-in-out infinite;
+}
+
+/*下からの距離が変化して全体が下→上→下に動く*/
+@keyframes arrowmove{
+    0%{bottom:1%;}
+    50%{bottom:3%;}
+   100%{bottom:1%;}
+}
+
+/*Scrollテキストの描写*/
+.scrolldown4 span{
+  /*描画位置*/
+position: absolute;
+left:-20px;
+bottom:10px;
+  /*テキストの形状*/
+color: #5B4B42;
+font-size: 0.7rem;
+letter-spacing: 0.05em;
+/*縦書き設定*/
+-ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+
+/* 矢印の描写 */
+.scrolldown4:before {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  right: -6px;
+  /*矢印の形状*/
+  width: 1px;
+  height: 20px;
+  background: #5B4B42;
+  transform: skewX(-31deg);
+}
+
+.scrolldown4:after{
+content:"";
+  /*描画位置*/
+position: absolute;
+bottom:0;
+right:0;
+  /*矢印の形状*/
+width:1px;
+height: 50px;
+background:#5B4B42;
 }
 
 
 /* サービス紹介エリア */
-#service_top_area {
-  display: flex;
-  align-items: center;
+#top_service_area {
+  height: 100vh;
+  padding-left: 30px;
+  padding-top: 50px;
+  background-color: white;
 }
 
-#service_top_area img {
-  width: 30%
+#top_service_area h2 {
+  font-weight: normal;
+  letter-spacing: 1cap;
+  line-height: 3cap;
 }
 
-
-/* サービスの流れエリア */
-.flow_box {
-  display: flex;
-  margin-bottom: 40px;
-}
-
-.flow_number {
-  width: 50px;
-  height: 50px;
-  padding-top: 10px;
-  border: #5B4B42 2px solid;
-  border-radius: 50%;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-.flow_title {
-  margin-left: 20px;
+#top_service_area p {
+  padding-top: 30px;
 }
 
 
-.flow_icon {
-  width:50px;
-  height: 50px;
-  text-align: center;
+/* お悩み解決エリア */
+#top_problem_area {
+  padding: 0 20px;
 }
 
-.flow_text {
-  margin-left: 20px;
-}
-
-.flow_down {
+#top_problem_title_area {
   width: 100%;
-  height: 32px;
-  margin: 20px 0px;
+  
+}
+
+.top_title_area h2 {
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 0.8cap;
+  line-height: 3cap;
+  padding-bottom: 30px;
+}
+
+.top_title_area h2:after {
+  content: "";
+  margin: 10px auto;
+  display: block;
+  width: 120px;
+  height: 4px;
+  border-radius: 2px;
+
+  background: linear-gradient(25deg, #F13F79, #FFC778); 
+}
+
+.top_problem_case_area {
+  height: 60vh;
   position: relative;
 }
 
-.flow_down img {
-  width: 32px;
-  height: 32px;
+.top_problem_case_list_area{
   position: absolute;
-  left: 50%; 
+  top: 50px;
+  left:100px;
 }
 
-
-/* 料金プランエリア */
-#plan_contents_area {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-}
-
-#total_plan {
-  width: 40%;
-  height: 300px;
-}
-
-#coordinate_plan {
-  width: 40%;
-  height: 300px
-}
-
-
-/* ブログエリア */
-/* #blog_lists {
-  display: flex;
-  justify-content: space-between;
-}
-
-.blog_article {
-  width: 30%;
+.top_problem_case_title_area{
   border: #5B4B42 1px solid;
+  border-radius: 30px;
+  width: 40%;
+  position: absolute;
+  top: 100px;
+  left: 100px
 }
 
-.blog_article img{
-  max-width: 100%;
-  height: auto;
+.top_problem_case_area h3, .top_problem_case_area p{
+  padding-left: 20px;
+  font-weight: normal;
+  line-height: 3cap;
 }
 
-.article_date {
-  font-size: 10px;
-  color: gray;
-  opacity: 0.7;
-} */
+.top_problem_case_solution_area{
+  border: #5B4B42 1px solid;
+  width: 55%;
+  position: absolute;
+  top: 200px;
+  left: 610px;
 
-
-/* =========== レスポンシブデザイン対応 ======================= */
-/* 600px以下の場合のみ、適用されます */
-@media (600px >= width) {
-  .top_plan_area {
-    display: none; /* 非表示 */
-  }
 }
 
 
+.top_problem_case_title_even_area{
+  border: #5B4B42 1px solid;
+  border-radius: 30px;
+  width: 40%;
+  position: absolute;
+  top: 100px;
+  right: 100px
+}
 
 
+.top_problem_case_solution_even_area{
+  border: #5B4B42 1px solid;
+  width: 55%;
+  position: absolute;
+  top: 200px;
+  right: 610px;
 
+}
+
+/* サービスの流れエリア */
+.top_process_row {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* カードの形を作る */
+.process_card {
+  width: 30%;
+  height: 500px;
+  background-color: #fff;
+  padding-left: 10px;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  border:#5B4B42 1px solid;
+  display: flex;
+  flex-direction: column;
+}
+
+.process_card::before {
+	content: '';            	/* 擬似要素に実体を持たせる */
+	width: calc(100% + 4px);    /* 外側の線になる要素の幅を指定する*/
+	height: calc(100% + 4px);   /* 外側の線になる要素の高さを指定する */
+	border: 1px solid #000;    	/* 外側の線になる一本線の枠線をひく*/
+	position: absolute;        	/* 外側の線の位置を自由に動かせるようにする */
+	top: 3px;            		/* 外側の線の位置を、内側の線から上に3pxずらす */
+	left: 3px;            		/* 外側の線の位置を、内側の線から左に3pxずらす*/
+}
+
+/* カードの中身 */
+.process_list {
+  background-color: #000;
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  border-radius: 100px;
+}
+
+.process_list p{
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-size: 30px;
+}
+
+.process_icon {
+  width: 40%;
+  height: 70px;
+  padding-top: 10%;
+}
+
+.process_icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.process_title {
+  padding-top: 10%;
+}
+
+
+/* よくある質問エリア */
+.top_faq_question {
+  padding: 10px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+}
