@@ -36,6 +36,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/tinymce', express.static(path.join(__dirname, 'node_modules', 'tinymce')));
 // jQueryを提供する
 app.use('/jquery', express.static(path.join(__dirname, 'node_modules', 'jquery', 'dist')));
+// progress.jsを提供する
+app.use('/progressbar.js', express.static(path.join(__dirname, 'node_modules', 'progressbar.js', 'dist')));
 
 
 
