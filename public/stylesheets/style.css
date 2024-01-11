@@ -193,6 +193,46 @@ scroll_up ｜下から上へ出現
 }
 
 
+/*----------------------------
+scroll_left ｜左から出現
+----------------------------*/
+.scroll_left {
+  -webkit-transition: 0.8s ease-in-out;
+  -moz-transition: 0.8s ease-in-out;
+  -o-transition: 0.8s ease-in-out;
+  transition: 1.5s ease-in-out;
+  transform: translateX(-30px);
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+}
+.scroll_left.on {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+  -moz-opacity: 1.0;
+  transform: translateX(0);
+}
+
+/*----------------------------
+scroll_right ｜右から出現
+----------------------------*/
+.scroll_right {
+  -webkit-transition: 0.8s ease-in-out;
+  -moz-transition: 0.8s ease-in-out;
+  -o-transition: 0.8s ease-in-out;
+  transition: 1.5s ease-in-out;
+  transform: translateX(30px);
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+}
+.scroll_right.on {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+  -moz-opacity: 1.0;
+  transform: translateX(0);
+}
+
 
 /* タイトルのレイアウト */
 .top_title_area h2 {
@@ -379,6 +419,7 @@ background:#5B4B42;
 }
 
 .question_area h3 {
+  padding-left: 10px;
   font-weight: normal;
   letter-spacing: 1cap;
   line-height: 3cap;
@@ -404,9 +445,14 @@ background:#5B4B42;
 }
 
 .solution_area h3{
+  padding-left: 10px;
   font-weight: normal;
   letter-spacing: 1cap;
   line-height: 3cap;
+}
+
+.solution_area p {
+  padding-left: 10px;
 }
 
 
