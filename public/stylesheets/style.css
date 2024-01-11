@@ -416,6 +416,7 @@ background:#5B4B42;
 .top_problem_case_question_area .question_area {
   width: 40%;
   border: #5B4B42 1px solid;
+  border-radius: 50px;
 }
 
 .question_area h3 {
@@ -436,11 +437,11 @@ background:#5B4B42;
 }
 
 .top_problem_case_solution_area .space_area {
-  width: 40%;
+  width: 41%;
 }
 
 .top_problem_case_solution_area .solution_area {
-  width: 60%;
+  width: 59%;
   border: #5B4B42 1px solid;
 }
 
